@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Hasil Quiz</title>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #119da4, #80ded9);
+        color: #fff;
+        text-align: center;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .card {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        padding: 30px 40px;
+        border-radius: 20px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      }
+      h1 {
+        margin-bottom: 10px;
+      }
+      .score {
+        font-size: 3rem;
+        font-weight: 700;
+        margin: 20px 0;
+        color: #fff;
+      }
+      .btn {
+        background: #fff;
+        color: #119da4;
+        border: none;
+        padding: 10px 18px;
+        border-radius: 10px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .btn:hover {
+        opacity: 0.9;
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>🎉 Hasil Quiz Kamu 🎉</h1>
+      <p id="name"></p>
+      <div class="score" id="score"></div>
+      <button class="btn" onclick="window.location.href='index.html'">Ulangi Quiz 🔁</button>
+    </div>
+
+    <script>
+      const result = JSON.parse(localStorage.getItem("lastResult") || "{}");
+      if (result.name && result.score !== undefined) {
+        document.getElementById("name").textContent = "Nama: " + result.name;
+        document.getElementById("score").textContent = result.score + "%";
+      } else {
+        document.getElementById("name").textContent = "Data tidak ditemukan.";
+      }
+    </script>
+  </body>
+</html>
