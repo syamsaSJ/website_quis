@@ -2,6 +2,7 @@
   box-sizing: border-box;
   transition: all 0.3s ease;
 }
+
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
@@ -10,6 +11,7 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 }
+
 header {
   text-align: center;
   color: #fff;
@@ -17,18 +19,22 @@ header {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(6px);
 }
+
 header h1 {
   margin: 0;
   font-size: 1.8rem;
 }
+
 header p {
   opacity: 0.9;
 }
+
 .container {
   max-width: 900px;
   margin: 20px auto;
   padding: 0 16px;
 }
+
 .card {
   background: rgba(255, 255, 255, 0.95);
   border-radius: 20px;
@@ -36,9 +42,11 @@ header p {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   margin-bottom: 20px;
 }
+
 h3 {
   margin-top: 0;
 }
+
 .btn {
   border: none;
   border-radius: 12px;
@@ -47,27 +55,33 @@ h3 {
   cursor: pointer;
   font-size: 0.9rem;
 }
+
 .btn.primary {
   background: #119da4;
   color: #fff;
 }
+
 .btn.ghost {
   background: #e7f4ff;
   color: #102a43;
 }
+
 .btn.small {
   font-size: 0.8rem;
   padding: 8px 10px;
 }
+
 .btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 .video-wrap,
 .quiz {
   margin-top: 16px;
   animation: fadeIn 0.5s ease forwards;
 }
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -78,11 +92,13 @@ h3 {
     transform: none;
   }
 }
+
 .options {
   display: grid;
   gap: 10px;
   margin-top: 12px;
 }
+
 .option {
   background: #f9fbff;
   border: 2px solid #e0e8f9;
@@ -91,25 +107,31 @@ h3 {
   cursor: pointer;
   font-weight: 500;
 }
+
 .option:hover {
   background: #e7f4ff;
 }
+
 .option.selected {
   border-color: #119da4;
   background: #e0f7f6;
   color: #0b3d40;
 }
+
 .hidden {
   display: none;
 }
+
 .question {
   font-weight: 600;
 }
+
 .result {
   font-weight: 600;
   margin-top: 8px;
   text-align: right;
 }
+
 footer {
   text-align: center;
   color: #fff;
@@ -117,6 +139,7 @@ footer {
   font-size: 0.85rem;
   margin-top: 30px;
 }
+
 #finalPage {
   display: none;
   position: fixed;
@@ -124,7 +147,7 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("gambar baground.jpg") center/cover no-repeat;
+  background: url("asset/gambar baground.jpg") center/cover no-repeat;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -133,6 +156,7 @@ footer {
   text-align: center;
   color: #fff;
 }
+
 #finalPage::before {
   content: "";
   position: absolute;
@@ -140,9 +164,11 @@ footer {
   background: rgba(0, 0, 0, 0.5);
   border-radius: 0;
 }
+
 #finalPage.active {
   display: flex;
 }
+
 #finalPage .question-box {
   background: rgba(255, 255, 255, 0.9);
   color: #102a43;
@@ -154,12 +180,15 @@ footer {
   position: relative;
   z-index: 1;
 }
+
 #finalPage .options {
   margin-top: 16px;
 }
+
 #finalPage .option {
   border-color: transparent;
 }
+
 .material-content {
   background: #f9f9f9;
   padding: 12px 16px;
@@ -167,9 +196,11 @@ footer {
   margin: 10px 0;
   line-height: 1.6;
 }
+
 .material-content b {
   color: #3066be; /* warna utama kamu */
 }
+
 .done-badge {
   background-color: #4caf50;
   color: white;
@@ -178,6 +209,7 @@ footer {
   border-radius: 8px;
   margin-left: 8px;
 }
+
 .btn.belum {
   background-color: #119da4;
   color: white;

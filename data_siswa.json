@@ -3,5 +3,10 @@
         "level1": 100,
         "level2": 100,
         "level3": 100
+    },
+    "caca": {
+        "level1": 100,
+        "level2": 100,
+        "level3": 100
     }
 }

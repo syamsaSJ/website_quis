@@ -4,50 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Admin Panel</title>
-    <style>
-      body {
-        font-family: "Poppins", sans-serif;
-        background: linear-gradient(135deg, #3066be, #6d9dc5);
-        color: #fff;
-        text-align: center;
-        min-height: 100vh;
-        padding: 30px;
-      }
-      table {
-        width: 80%;
-        margin: 20px auto;
-        border-collapse: collapse;
-        background: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(10px);
-        border-radius: 12px;
-        overflow: hidden;
-      }
-      th,
-      td {
-        padding: 10px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-      }
-      th {
-        background: rgba(0, 0, 0, 0.2);
-      }
-      tr:hover {
-        background: rgba(255, 255, 255, 0.1);
-      }
-      .btn {
-        background: #fff;
-        color: #3066be;
-        border: none;
-        padding: 10px 16px;
-        border-radius: 10px;
-        font-weight: 600;
-        cursor: pointer;
-        margin-top: 20px;
-      }
-      .btn:hover {
-        opacity: 0.9;
-        transform: scale(1.05);
-      }
-    </style>
+    <link rel="stylesheet" href="css/admincss.css" />
   </head>
   <body>
     <h1>📊 Data Skor Siswa</h1>
@@ -65,18 +22,6 @@
     </table>
     <button class="btn" onclick="window.location.href='index.html'">Kembali ke Quiz</button>
 
-    <script>
-      const db = JSON.parse(localStorage.getItem("smojo_scores") || "{}");
-      const tbody = document.querySelector("#scoreTable tbody");
-      for (const [name, scores] of Object.entries(db)) {
-        const tr = document.createElement("tr");
-        tr.innerHTML = `<td>${name}</td>
-  <td>${scores.level1 ?? "-"}</td>
-  <td>${scores.level2 ?? "-"}</td>
-  <td>${scores.level3 ?? "-"}</td>
-  <td>${scores.final ?? "-"}</td>`;
-        tbody.appendChild(tr);
-      }
-    </script>
+    <script src="js/adminscript.js"></script>
   </body>
 </html>

@@ -1,5 +1,4 @@
 <?php
-// file: save_score.php
 header('Content-Type: application/json');
 
 $file = 'data_siswa.json'; // file penyimpanan di server
